@@ -420,7 +420,7 @@ footer em     { color: rgba(255,255,255,0.65); }
         </div>
         <div class="brand-text">
           <h1>DH<span>+</span> Justiça</h1>
-          <p id="hdrSubtitulo">Educação Integral, Equidade e Direitos Humanos na Amazônia</p>
+          <p id="hdrSubtitulo">Direitos Humanos, Sistema de Justiça e Redução das Desigualdades</p>
         </div>
       </div>
       <div class="header-meta">
@@ -924,13 +924,15 @@ footer em     { color: rgba(255,255,255,0.65); }
 
 <!-- FOOTER -->
 <footer>
-  <strong>DH+ Justiça</strong> — Painel de Educação Integral, Equidade e Direitos Humanos na Amazônia<br>
-  <strong>Profa. Dra. Aparecida Luzia Alzira Zuin</strong> — UNIR/DHJUS — Departamento de Ciências Jurídicas<br>
-  Projeto de Pesquisa: <em>Sistema de Justiça na Amazônia</em> ·
-  Projeto de Extensão: <em>Formação Continuada — Educação Midiática e Integral</em><br>
-  Parceria: Universidade de Coimbra (Portugal) · PACC/UFRJ ·
-  Financiamento: TJ-RO, Defensoria Pública e MP-RO<br>
-  Dados: MEC/INEP · Censo Escolar 2022–2025 · Plano M&A ETI 2023–2026
+  <div style="max-width:900px;margin:0 auto;text-align:center;line-height:1.8">
+    <strong>Painel DH+ Justiça</strong><br>
+    Direitos Humanos, Sistema de Justiça e Redução das Desigualdades<br>
+    <strong>Profa. Dra. Aparecida Luzia Alzira Zuin</strong> — Programa de Pós-Graduação Doutorado e Mestrado em Direitos Humanos e Desenvolvimento da Justiça <strong>(DHJUS/UNIR)</strong><br>
+    <em>Projeto de Pesquisa:</em> Sistema de Justiça na Amazônia: indicadores de direitos humanos, redução das desigualdades e promoção da inclusão social<br>
+    <em>Projetos Integradores:</em> Educação Integral em Rondônia: as dimensões do desenvolvimento humano na Amazônia Ocidental<br>
+    Memória como mecanismo de justiça e reparação integral às vítimas de graves violações aos Direitos Humanos e do trabalho decente na Amazônia<br>
+    Projeto financiado no âmbito dos Acordos PD&amp;Is <strong>UNIR-DHJUS · TJRO-EMERON · MPRO · DPRO · MPT 14ª Região RO/AC</strong>
+  </div>
 </footer>
 
 </div><!-- /painelPrincipal -->
@@ -1143,7 +1145,7 @@ const DADOS_EMBUTIDOS = {
 
   CONFIG: [
     { campo: 'nome_painel',         valor: 'DH+ Justiça' },
-    { campo: 'subtitulo',           valor: 'Educação Integral, Equidade e Direitos Humanos na Amazônia' },
+    { campo: 'subtitulo',           valor: 'Direitos Humanos, Sistema de Justiça e Redução das Desigualdades' },
     { campo: 'instituicao',         valor: 'UNIR — Universidade Federal de Rondônia' },
     { campo: 'programa',            valor: 'DHJUS — Direitos Humanos e Desenvolvimento da Justiça' },
     { campo: 'autora',              valor: 'Profa. Dra. Aparecida Luzia Alzira Zuin' },
@@ -1332,7 +1334,7 @@ function popularConfig() {
     cfg[campo] = r.valor || '';
   });
 
-  setText('hdrSubtitulo', cfg.subtitulo || 'Educação Integral, Equidade e Direitos Humanos na Amazônia');
+  setText('hdrSubtitulo', cfg.subtitulo || 'Direitos Humanos, Sistema de Justiça e Redução das Desigualdades');
   setText('hdrInst', cfg.programa || 'UNIR — DHJUS');
   setText('hdrAutora', cfg.autora || 'Profa. Dra. Aparecida Luzia Alzira Zuin');
   setText('statusCiclo', cfg.ciclo_atual || '2025/2026');
