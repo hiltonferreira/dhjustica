@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DH+ Justiça — Direitos Humanos, Sistema de Justiça e Redução das Desigualdades</title>
+<title>DH+ Justiça e Paz — Direitos Humanos, Sistema de Justiça e Redução das Desigualdades</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <style>
@@ -383,6 +383,30 @@ footer em     { color: rgba(255,255,255,0.65); }
   .brand { flex-direction: column; align-items: flex-start; }
   .header-top { flex-direction: column; }
 }
+/* BLOCO DE EVOLUÇÃO — antes/depois */
+.evol-card{background:var(--card-bg);border-radius:var(--radius);
+  padding:20px 22px;box-shadow:0 2px 12px rgba(0,0,0,0.07);margin-bottom:22px}
+.evol-card-title{font-size:13px;font-weight:700;color:var(--c1);margin-bottom:4px}
+.evol-card-sub{font-size:11px;color:var(--c3);margin-bottom:18px}
+.evol-item{margin-bottom:20px}
+.evol-item:last-child{margin-bottom:0}
+.evol-item-label{font-size:12px;font-weight:600;color:var(--c1);margin-bottom:10px}
+.evol-row{display:flex;align-items:center;gap:10px;margin-bottom:7px}
+.evol-momento{font-size:10px;color:var(--c2);width:78px;flex-shrink:0;text-align:right}
+.evol-track{flex:1;height:20px;background:var(--c4);border-radius:6px;
+  overflow:hidden;position:relative}
+.evol-fill{height:100%;border-radius:6px;transition:width 1.1s cubic-bezier(.4,0,.2,1);
+  display:flex;align-items:center;justify-content:flex-end;padding-right:8px}
+.evol-fill span{font-size:10px;font-weight:700;color:#fff;white-space:nowrap}
+.evol-fill.antigo{background:var(--c3)}
+.evol-fill.novo{background:var(--verde-m)}
+.evol-valor{font-size:11px;font-weight:700;width:52px;flex-shrink:0;color:var(--c1)}
+.evol-delta{display:inline-block;font-size:10px;font-weight:700;
+  padding:2px 8px;border-radius:10px;background:var(--verde-xs);color:var(--verde);margin-left:8px}
+@media(max-width:560px){
+  .evol-momento{width:60px}
+  .evol-valor{width:44px;font-size:10px}
+}
 </style>
 </head>
 <body>
@@ -420,7 +444,7 @@ footer em     { color: rgba(255,255,255,0.65); }
         </div>
         <div class="brand-text">
           <h1>DH<span>+</span> Justiça</h1>
-          <p id="hdrSubtitulo" style="display:none"></p>
+          <p id="hdrSubtitulo">Direitos Humanos, Sistema de Justiça e Redução das Desigualdades</p>
         </div>
       </div>
       <div class="header-meta">
@@ -451,7 +475,7 @@ footer em     { color: rgba(255,255,255,0.65); }
   <div class="nav-inner">
     <div class="nav-tab active" data-sec="visaoGeral">Visão Geral</div>
     <div class="nav-tab" data-sec="metaPNE">Meta 6 PNE</div>
-    <div class="nav-tab" data-sec="indiceDHJ">Índice DH+ Justiça</div>
+    <div class="nav-tab" data-sec="indiceDHJ">Índice DH+ Justiça e Paz</div>
     <div class="nav-tab" data-sec="territorioRO">Território RO</div>
     <div class="nav-tab" data-sec="equidade">Equidade</div>
     <div class="nav-tab" data-sec="formacao">Formação</div>
@@ -470,7 +494,7 @@ footer em     { color: rgba(255,255,255,0.65); }
 <section class="section active" id="visaoGeral">
   <div class="sec-header">
     <div class="sec-title">Visão Geral</div>
-    <div class="sec-sub">Principais indicadores do Painel DH+ Justiça — Direitos Humanos, Sistema de Justiça e Redução das Desigualdades</div>
+    <div class="sec-sub">Principais indicadores do Painel DH+ Justiça e Paz — Direitos Humanos, Sistema de Justiça e Redução das Desigualdades</div>
   </div>
 
   <div class="alert ok">
@@ -606,7 +630,7 @@ footer em     { color: rgba(255,255,255,0.65); }
 ══════════════════════════════════════════ -->
 <section class="section" id="indiceDHJ">
   <div class="sec-header">
-    <div class="sec-title">Índice DH+ Justiça (IDHJ)</div>
+    <div class="sec-title">Índice DH+ Justiça e Paz (IDHJ)</div>
     <div class="sec-sub">Instrumento síntese que integra acesso, equidade e formação · Fórmula: 0,25T + 0,20A + 0,20E + 0,15R + 0,10I + 0,10F</div>
   </div>
 
@@ -693,10 +717,38 @@ footer em     { color: rgba(255,255,255,0.65); }
 
   <div class="g4" id="kpisTerr"></div>
 
-  <div class="alert warn">
-    <span class="alert-icon">⚠</span>
-    <div><strong>Divergência nos dados de política municipal:</strong>
-    Três fontes indicam números diferentes — levantamento local: 8 municípios (15,4%) · SIMEC jan/2025: 33 (63,5%) · base de pactuação: 9 (24,3%). Critérios distintos: política formalizada em lei vs. registro no sistema vs. pactuação de matrículas.</div>
+  <!-- BLOCO DE EVOLUÇÃO — fechamento 2025 -->
+  <div class="evol-card">
+    <div class="evol-card-title">Evolução 2025 — Programa Escola em Tempo Integral</div>
+    <div class="evol-card-sub">Comparativo entre o levantamento inicial (jan/2025) e o fechamento do monitoramento (Portaria MEC nº 65/2025)</div>
+
+    <div class="evol-item">
+      <div class="evol-item-label">Municípios com pactuação ETI efetivada</div>
+      <div class="evol-row">
+        <div class="evol-momento">jan/2025</div>
+        <div class="evol-track"><div class="evol-fill antigo" id="evolPact1"><span>9/37</span></div></div>
+        <div class="evol-valor">24,3%</div>
+      </div>
+      <div class="evol-row">
+        <div class="evol-momento">fechamento 2025</div>
+        <div class="evol-track"><div class="evol-fill novo" id="evolPact2"><span>36/47</span></div></div>
+        <div class="evol-valor">76,6%<span class="evol-delta">↑ +27 mun.</span></div>
+      </div>
+    </div>
+
+    <div class="evol-item">
+      <div class="evol-item-label">Política / Norma de Educação Integral registrada</div>
+      <div class="evol-row">
+        <div class="evol-momento">jan/2025</div>
+        <div class="evol-track"><div class="evol-fill antigo" id="evolPol1"><span>33/52</span></div></div>
+        <div class="evol-valor">63,5%</div>
+      </div>
+      <div class="evol-row">
+        <div class="evol-momento">fechamento 2025</div>
+        <div class="evol-track"><div class="evol-fill novo" id="evolPol2"><span>40/52</span></div></div>
+        <div class="evol-valor">76,9%<span class="evol-delta">↑ +7 mun.</span></div>
+      </div>
+    </div>
   </div>
 
   <div class="card" style="margin-bottom:22px">
@@ -925,7 +977,7 @@ footer em     { color: rgba(255,255,255,0.65); }
 <!-- FOOTER -->
 <footer>
   <div style="max-width:900px;margin:0 auto;text-align:center;line-height:1.8">
-    <strong>Painel DH+ Justiça</strong><br>
+    <strong>Painel DH+ Justiça e Paz</strong><br>
     Direitos Humanos, Sistema de Justiça e Redução das Desigualdades<br>
     <strong>Profa. Dra. Aparecida Luzia Alzira Zuin</strong> — Programa de Pós-Graduação Doutorado e Mestrado em Direitos Humanos e Desenvolvimento da Justiça <strong>(DHJUS/UNIR)</strong><br>
     <em>Projeto de Pesquisa:</em> Sistema de Justiça na Amazônia: indicadores de direitos humanos, redução das desigualdades e promoção da inclusão social<br>
@@ -1144,7 +1196,7 @@ async function fetchCSV(url, chave) {
 const DADOS_EMBUTIDOS = {
 
   CONFIG: [
-    { campo: 'nome_painel',         valor: 'DH+ Justiça' },
+    { campo: 'nome_painel',         valor: 'DH+ Justiça e Paz' },
     { campo: 'subtitulo',           valor: 'Direitos Humanos, Sistema de Justiça e Redução das Desigualdades' },
     { campo: 'instituicao',         valor: 'UNIR — Universidade Federal de Rondônia' },
     { campo: 'programa',            valor: 'DHJUS — Direitos Humanos e Desenvolvimento da Justiça' },
@@ -1369,6 +1421,7 @@ function renderizarTudo() {
   renderizarIDHJComponents();
   renderizarChRadar();
   renderizarKPIsTerr();
+  animarEvolucao();
   renderizarTabela();
   renderizarChRaca();
   renderizarIERList();
@@ -1401,7 +1454,7 @@ function renderizarKPIsGerais() {
     kpiHTML('verde',   '% TI Brasil 2025',       '25,8%', 'Meta 6 PNE atingida',       '↑ +7,6pp desde 2022', 'up') +
     kpiHTML('amarelo', '% TI Rondônia 2022',      '4,4%',  'Linha de base ETI',         '⚠ 21,4pp abaixo da meta', 'down') +
     kpiHTML('verde',   'Cobertura Formação RO',   '96%',   '50 de 52 municípios',       '↑ Quase totalidade', 'up') +
-    kpiHTML('azul',    'Índice DH+ Justiça',      '0,71',  'Médio — em consolidação',   '→ Faixa 0,60–0,79', 'neu');
+    kpiHTML('azul',    'Índice DH+ Justiça e Paz',      '0,71',  'Médio — em consolidação',   '→ Faixa 0,60–0,79', 'neu');
 }
 
 function renderizarKPIsRO() {
@@ -1438,9 +1491,31 @@ function renderizarKPIsTerr() {
   el.innerHTML =
     kpiHTML('verde',   'Escolas ativas (2025)',  '1.222',   'Fonte: INEP 07/01/2026', null, '') +
     kpiHTML('azul',    'Matrículas (2025)',       '376.452', 'Matrículas curriculares', '↓ -7.397 vs 2024', 'down') +
-    kpiHTML('amarelo', 'Municípios ETI 2024/25',  '9 / 37',  'Com pactuação realizada', '24,3% dos aderidos', 'neu') +
-    kpiHTML('verde',   'Política no SIMEC',       '33 / 52', 'Com política jan/2025', '63,5% dos municípios', 'up');
+    kpiHTML('amarelo', 'Pactuação ETI (fech. 2025)',  '36 / 47',  'Cumpriram o Ciclo 1', '76,6% dos aderidos', 'up') +
+    kpiHTML('verde',   'Política / Norma ETI',       '40 / 52', 'Registrada · fech. 2025', '76,9% dos municípios', 'up');
 }
+
+function animarEvolucao() {
+  // define larguras proporcionais (%) das barras antes/depois
+  const larguras = {
+    evolPact1: 24.3,  // 9/37
+    evolPact2: 76.6,  // 36/47
+    evolPol1:  63.5,  // 33/52
+    evolPol2:  76.9   // 40/52
+  };
+  // inicia em 0 e anima para o valor após um instante
+  Object.keys(larguras).forEach(function(id){
+    const el = document.getElementById(id);
+    if (el) el.style.width = '0%';
+  });
+  setTimeout(function(){
+    Object.keys(larguras).forEach(function(id){
+      const el = document.getElementById(id);
+      if (el) el.style.width = larguras[id] + '%';
+    });
+  }, 300);
+}
+
 
 function renderizarKPIsAmaz() {
   const el = document.getElementById('kpisAmaz');
